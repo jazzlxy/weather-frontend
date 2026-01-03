@@ -42,8 +42,8 @@ const Weather = () => {
   };
 
   return (
-    <div className="weather">
-      <div className="search-bar">
+    <div className="weather box-border w-[400px] md:w-[600px] p-4 md:p-10 rounded-xl m-0">
+      <div className="search-bar w-[300px] md:w-[500px] mx-auto my-3 md:my-5 gap-2 md:gap-3">
         <input
           type="text"
           placeholder="Search"
@@ -54,29 +54,37 @@ const Weather = () => {
         <img src={search_icon} alt="" className="search-icon" />
       </div>
       {/* Current Weather */}
-      <div className="current-weather-card">
+      <div className="current-weather-card w-[300px] md:w-[500px] p-4 md:p-8 mx-auto my-3 md:my-5 gap-4 md:gap-12 rounded-[20px]">
         <div className="current-weather-top">
           <div className="weather-info">
-            <p className="temperature">{weatherData.temperature}&deg;C</p>
-            <p className="location">{weatherData.city}</p>
+            <p className="temperature text-2xl md:text-5xl m-0">
+              {weatherData.temperature}&deg;C
+            </p>
+            <p className="location text-xs md:text-lg md:mt-2">
+              {weatherData.city}
+            </p>
           </div>
           <img
             src={`https://openweathermap.org/img/wn/${weatherData.icon}.png`}
             alt=""
-            className="weather-icon"
+            className="weather-icon w-12 md:w-22 h-auto"
           />
         </div>
         <div className="hourly-forecast">
           {weatherData && "hourly" in weatherData ? (
             weatherData.hourly.map((hourlyItem) => (
-              <div className="hourly-item">
-                <p className="hourly-temp">{hourlyItem.temperature}&deg;C</p>
+              <div className="hourly-item md:gap-1">
+                <p className="hourly-temp text-xs md:text-lg font-bold m-0">
+                  {hourlyItem.temperature}&deg;C
+                </p>
                 <img
                   src={`https://openweathermap.org/img/wn/${weatherData.icon}.png`}
                   alt=""
-                  className="hourly-icon"
+                  className="hourly-icon w-6 md:w-12"
                 />
-                <p className="hourly-time">{hourlyItem.time}</p>
+                <p className="hourly-time text-xs md:text-lg m-0">
+                  {hourlyItem.time}
+                </p>
               </div>
             ))
           ) : (
@@ -91,18 +99,22 @@ const Weather = () => {
         </div>
       </div>
       {/* 5 Day Forecast */}
-      <div className="multiple-forecast-card">
+      <div className="multiple-forecast-card w-[300px] md:w-[500px] p-4 md:p-8 mx-auto my-3 md:my-5 gap-3 md:gap-5 rounded-[20px]">
         {weatherData && "daily" in weatherData ? (
           weatherData.daily.map((dailyItem) => (
-            <div className="forecast-row">
-              <p className="forecast-date">{dailyItem.day}</p>
-              <p className="forecast-humidity">{dailyItem.humidity}%💧</p>
+            <div className="forecast-row px-0 py-3 md:py-5 gap-4 md:gap-12">
+              <p className="forecast-date w-[50px] md:w-[80px] text-xs md:text-lg font-semibold m-0">
+                {dailyItem.day}
+              </p>
+              <p className="forecast-humidity w-[60px] md:w-[60px] text-xs md:text-lg font-semibold m-0">
+                {dailyItem.humidity}%💧
+              </p>
               <img
                 src={`https://openweathermap.org/img/wn/${weatherData.icon}.png`}
                 alt=""
-                className="forecast-icon"
+                className="forecast-icon w-6 md:w-12 h-auto"
               />
-              <p className="forecast-temp">
+              <p className="forecast-temp w-[80px] md:w-[100px] text-xs md:text-lg font-semibold m-0">
                 {dailyItem.temp_min}&deg;C / {dailyItem.temp_max}&deg;C
               </p>
             </div>

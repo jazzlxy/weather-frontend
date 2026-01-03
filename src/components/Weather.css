@@ -1,21 +1,20 @@
 @import "tailwindcss";
-
 .weather {
   place-self: center;
-  padding: 40px;
-  border-radius: 10px;
-  background-image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  /* background-image: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab); */
+  /* background-size: 400% 400%; */
+  /* animation: gradient 15s ease infinite; */
   display: flex;
   flex-direction: column;
   flex: 1;
   align-items: center;
+  /* padding: 40px; */
+  /* border-radius: 10px; */
   /* max-width: 800px; */
   /* width: 100%; */
   /* height: 100%; */
   /* box-shadow: 0px 8px 24px #9ba2b0; */
-  margin: 0;
+  /* margin: 0; */
 }
 
 @keyframes gradient {
@@ -33,9 +32,9 @@
 /* Search bar section*/
 .search-bar {
   position: relative;
-  width: 600px;
-  margin: 20px auto;
-  gap: 12px;
+  /* width: 600px; */
+  /* margin: 20px auto; */
+  /* gap: 12px; */
 }
 .search-bar input {
   width: 100%;
@@ -66,13 +65,13 @@
 .current-weather-card {
   display: flex;
   flex-direction: column; /* Stack top section and hourly forecast vertically */
-  gap: 60px; /* Controls space between TOP section and HOURLY section */
+  /*gap: 60px; Controls space between TOP section and HOURLY section */
   background: white;
-  padding: 30px;
-  border-radius: 20px;
-  margin: 20px auto;
-  width: 600px;
-  max-width: 600px;
+  /* padding: 30px; */
+  /* border-radius: 20px; */
+  /* margin: 20px auto; */
+  /* width: 600px;
+  max-width: 600px; */
 }
 
 /* Current weather top section */
@@ -80,7 +79,6 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 350px; /* Gap between temp, location and the sun icon */
 }
 
 .weather-info {
@@ -90,20 +88,20 @@
 }
 
 .temperature {
-  font-size: 45px;
+  /* font-size: 45px; */
   font-weight: bold;
-  margin: 0; /*remove default spacing from <p> tag*/
+  /* margin: 0; remove default spacing from <p> tag*/
   color: #333;
 }
 .location {
-  font-size: 18px;
-  margin: 5px, 0, 0, 0;
+  /* font-size: 18px; */
+  /* margin: 5px, 0, 0, 0; */
   color: #666;
 }
 .weather-icon {
   opacity: 1;
-  width: 80px;
-  height: auto;
+  /* width: 80px; */
+  /* height: auto; */
 }
 
 .delay-100 {
@@ -125,24 +123,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px; /* Space between temp, icon and time */
+  /* gap: 10px;  Space between temp, icon and time */
 }
 
 .hourly-temp {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0;
+  /* font-size: 18px; */
+  /* font-weight: 600; */
+  /* margin: 0; */
   color: #333;
 }
 
 .hourly-time {
-  font-size: 18px;
-  margin: 0;
+  /* font-size: 18px; */
+  /* margin: 0; */
   color: #666;
 }
 
 .hourly-icon {
-  width: 45px;
+  /* width: 45px; */
   height: auto;
 }
 
@@ -150,20 +148,20 @@
 .multiple-forecast-card {
   display: flex;
   flex-direction: column; /* Stack rows vertically*/
-  gap: 20px; /* Spacing between each row */
+  /* gap: 20px;  Spacing between each row */
   background: white;
-  padding: 30px;
-  border-radius: 20px;
-  margin: 20px auto;
-  max-width: 600px;
+  /* padding: 30px; */
+  /* border-radius: 20px; */
+  /* margin: 20px auto; */
+  /* max-width: 600px; */
 }
 /* Each row (one day) */
 .forecast-row {
   display: flex;
   align-items: center; /* Center items vertically */
-  padding: 20px 0;
+  /* padding: 20px 0; */
   border-bottom: 1px solid #e0e0e0;
-  gap: 60px; /* Add gap between items instead of using justify-content */
+  /* gap: 60px;  Add gap between items instead of using justify-content */
 }
 
 /* Remove border line for the last row */
@@ -172,34 +170,34 @@
 }
 
 .forecast-date {
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0;
+  /* font-size: 18px; */
+  /* font-weight: 500; */
+  /* margin: 0; */
   color: #333;
   text-align: left;
-  width: 120px;
+  /* width: 120px; */
 }
 
 .forecast-humidity {
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0;
+  /* font-size: 18px; */
+  /* font-weight: 500; */
+  /* margin: 0; */
   color: #333;
   text-align: center;
-  width: 80px;
+  /* width: 80px; */
 }
 
 .forecast-temp {
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0;
+  /* font-size: 18px; */
+  /* font-weight: 500; */
+  /* margin: 0; */
   color: #333;
   text-align: right;
-  width: 120px;
+  /* width: 120px; */
 }
 /* Weather icon */
 .forecast-icon {
-  width: 45px;
-  height: auto;
+  /* width: 45px; */
+  /* height: auto; */
   flex-shrink: 0;
 }
